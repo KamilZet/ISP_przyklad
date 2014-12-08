@@ -12,26 +12,26 @@ namespace SegregujInterfejsy
 	/// </summary>
 	public class TimedDoorAdapter : ITimerClient
 	{
-		private ITimedDoor timedDoor;
-		
-		public TimedDoorAdapter(ITimedDoor _door)
-		{
+		public TimedDoorAdapter(ITimedDoor _door){
 			timedDoor = _door;
-			handler = new DoorOpenedHandler();
-			handler.ThrowDoorOpen += (sender,args)=>{respondToEvent();}
+			
+			// podmienić jakoś TimedDoor, zeby nie było ścisłej zaleznosci.
+			// ewentualnie wrzucic sygn zdarzenia do int ITimedDoor
+			((TimedDoor)_door).OpenEvent += new TimedDoor.DoorOpenedHandler(startCountThread);
 		}
-		
-		private void respondToEvent(){}
-					
-		private DoorOpenedHandler handler;
-		
 		public virtual void TimeOut(int _timeOutId){
 			timedDoor.DoorTimeOut(_timeOutId);
 		}
 		public int TimeLimit{
-			get{return 1;}
+			get{return timedDoor.TimeLimit;}
 		}
 		
+		private void startCountThread(ITimedDoor _door,EventArgs args){
+			Console.WriteLine("door open. count elapsed time.");
+		}
+					
+		private ITimedDoor timedDoor;
+		private DoorOpenedHandler handler;		
 		
 		
 		

@@ -13,5 +13,8 @@ namespace SegregujInterfejsy
 	public interface ITimedDoor : IDoor
 	{
 		void DoorTimeOut(int _timeOutId);
+		int TimeLimit{
+			get;
+		}
 	}
 }

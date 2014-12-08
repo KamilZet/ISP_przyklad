@@ -15,7 +15,9 @@ namespace SegregujInterfejsy
 	/// </summary>
 	public class TimedDoor : IDoor,ITimedDoor
 	{
+		public delegate void DoorOpenedHandler(ITimedDoor _door, EventArgs args) ;
 		public event DoorOpenedHandler OpenEvent;
+		
 		
 		private int openTimeLimit;
 		public int TimeLimit{
@@ -44,7 +46,7 @@ namespace SegregujInterfejsy
 			
 		
 		public void Open(){
-			if(OpenEvent != null)OpenEvent();
+			if(OpenEvent != null)OpenEvent(this,new EventArgs());
 			isOpened = true;
 			
 		}

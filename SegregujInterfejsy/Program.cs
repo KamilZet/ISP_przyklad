@@ -14,6 +14,7 @@ namespace SegregujInterfejsy
 			TimedDoor door = new TimedDoor(1);
 			Timer timer = new Timer();
 			timer.RegisterClient(door.Adapter);
+			door.Open();
 		}
 	}
 }

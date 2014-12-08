@@ -13,9 +13,7 @@ namespace SegregujInterfejsy
 	public interface ITimerClient
 	{
 		void TimeOut(int _timeOutId);
-		int TimeLimit{
-			get;
-		}
+		
 		
 	}
 }

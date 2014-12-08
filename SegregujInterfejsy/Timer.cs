@@ -25,8 +25,8 @@ namespace SegregujInterfejsy
 		public void RegisterClient(ITimerClient client)
 		{
 			Clients.Add(client);
-			System.Threading.Thread.Sleep(client.TimeLimit);
-			client.TimeOut(1);
+			//System.Threading.Thread.Sleep(client.TimeLimit);
+			//client.TimeOut(1);
 		}
 		
 		
