@@ -17,8 +17,13 @@ namespace SegregujInterfejsy
 		public TimedDoorAdapter(ITimedDoor _door)
 		{
 			timedDoor = _door;
-			
+			handler = new DoorOpenedHandler();
+			handler.ThrowDoorOpen += (sender,args)=>{respondToEvent();}
 		}
+		
+		private void respondToEvent(){}
+					
+		private DoorOpenedHandler handler;
 		
 		public virtual void TimeOut(int _timeOutId){
 			timedDoor.DoorTimeOut(_timeOutId);
@@ -26,6 +31,8 @@ namespace SegregujInterfejsy
 		public int TimeLimit{
 			get{return 1;}
 		}
+		
+		
 		
 		
 		

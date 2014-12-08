@@ -16,5 +16,6 @@ namespace SegregujInterfejsy
 		int TimeLimit{
 			get;
 		}
+		
 	}
 }

@@ -4,3 +4,5 @@ C:\Users\Kamil\Documents\SharpDevelop Projects\SegregujInterfejsy\SegregujInterf
 C:\Users\Kamil\Documents\SharpDevelop Projects\SegregujInterfejsy\SegregujInterfejsy\bin\Debug\SegregujInterfejsy.pdb
 C:\Users\Kamil\Documents\SharpDevelop Projects\SegregujInterfejsy\SegregujInterfejsy\obj\Debug\SegregujInterfejsy.exe
 C:\Users\Kamil\Documents\SharpDevelop Projects\SegregujInterfejsy\SegregujInterfejsy\obj\Debug\SegregujInterfejsy.pdb
+C:\Users\Kamil\Documents\SharpDevelop Projects\SegregujInterfejsy\ISP_przyklad\SegregujInterfejsy\obj\Debug\SegregujInterfejsy.csprojResolveAssemblyReference.cache
+C:\Users\Kamil\Documents\SharpDevelop Projects\SegregujInterfejsy\ISP_przyklad\SegregujInterfejsy\obj\Debug\SegregujInterfejsy.exe

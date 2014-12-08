@@ -48,6 +48,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DoorOpenedHandler.cs" />
     <Compile Include="IDoor.cs" />
     <Compile Include="ITimedDoor.cs" />
     <Compile Include="Program.cs" />
